@@ -1,6 +1,8 @@
 <template>
-    <h1>{{ message }}</h1>
-    <BinaryConverter></BinaryConverter>
+    <div class="app-container">
+        <h1 id="app-title">{{ message }}</h1>
+        <BinaryConverter></BinaryConverter>
+    </div>
 </template>
 
 <script>
@@ -15,17 +17,29 @@ export default {
     },
     data() {
         return {
-            message: 'Welcome to my binary converter!'
+            message: 'Binary converter'
         }
     }
 }
 </script>
 
-<style scoped>
-h1 {
-    color: blueviolet;
+<style>
+body {
+    background-color: lightgray;
+}
+
+.app-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+h1#app-title {
+    font-family: Ubuntu;
     text-align: center;
-    margin: 0;
     width: auto;
+    margin-top: 50%;
 }
 </style>
