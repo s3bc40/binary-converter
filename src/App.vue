@@ -1,12 +1,21 @@
 <template>
     <h1>{{ message }}</h1>
+    <BinaryConverter></BinaryConverter>
 </template>
 
 <script>
+// Import components
+import BinaryConverter from './components/BinaryConverter'
+
+// Init applications
 export default {
+    name: 'App',
+    components: {
+        BinaryConverter
+    },
     data() {
         return {
-            message: 'Hello World!'
+            message: 'Welcome to my binary converter!'
         }
     }
 }
