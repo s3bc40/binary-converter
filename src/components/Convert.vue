@@ -30,7 +30,7 @@ export default {
 /* CSS for Convert application */
 .grid-container {
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 25% 50% auto;
     grid-template-areas: 
         'title title title'
         'title title title'
