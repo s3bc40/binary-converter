@@ -1,45 +1,26 @@
 <template>
-    <div class="app-container">
-        <h1 id="app-title">{{ message }}</h1>
-        <BinaryConverter></BinaryConverter>
-    </div>
+    <Convert></Convert>
 </template>
 
 <script>
 // Import components
-import BinaryConverter from './components/BinaryConverter'
+import Convert from './components/Convert'
 
 // Init applications
 export default {
     name: 'App',
     components: {
-        BinaryConverter
+        Convert
     },
-    data() {
-        return {
-            message: 'Binary converter'
-        }
-    }
 }
 </script>
 
 <style>
-body {
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
     background-color: lightgray;
-}
-
-.app-container {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-h1#app-title {
     font-family: Ubuntu;
-    text-align: center;
-    width: auto;
-    margin-top: 50%;
 }
 </style>
