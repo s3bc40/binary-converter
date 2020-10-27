@@ -8,7 +8,8 @@ echo "Deployment..."
 npm run build
 
 # copy dist dir into doc for githubpages
-cp -r dist docs
+rm -r docs
+cp -R dist/. docs
 
 echo "Push prod app to GithubPages..."
 git add .
