@@ -1,5 +1,9 @@
 # binary-converter
 
+## About
+My first application in Vue.js version 3. I have used Vue CLI locally.
+Deployed app is available in the `/docs`. It is live at [s3bc40.github.io/binary-converter/](https://s3bc40.github.io/binary-converter/).
+
 ## Project setup
 ```
 npm install
