@@ -4,19 +4,17 @@
 set -e
 
 # build
+echo "Deployment..."
 npm run build
 
-# navigate to dist build directory
-cd dist
+# copy dist dir into doc for githubpages
+cp -r dist docs
 
-git init
-git add -A
-git commit -m 'deploy'
-
-# if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
-
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:s3bc40/binary-converter.git prod-branch:gh-pages
+echo "Push prod app to GithubPages..."
+git add .
+git commit -m 'Deploy app to GihubPages'
+git push origin main
 
 cd -
+
+echo "App deployed!!!"
