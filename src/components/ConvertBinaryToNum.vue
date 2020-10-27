@@ -1,8 +1,8 @@
 <template>
-    <h2 class="app-convert-title">{{ title }}</h2>
-    <input class="app-convert-input" v-model="binary" placeholder="Enter your binary" />
-    <div class="app-convert-converted" v-show="binary.length > 0">
-        <p>{{ binaryToNumber }}</p>
+    <h3 class="app-convert-title">{{ title }}</h3>
+    <textarea class="app-convert-input" v-model="binary" placeholder="Enter your binary"></textarea>
+    <div class="app-convert-converted">
+        <p v-show="binary.length > 0">{{ binaryToNumber }}</p>
     </div>
 </template>
 
@@ -18,7 +18,8 @@ export default {
     },
     computed: {
         binaryToNumber() {
-            return /^(0|1)+$/.test(this.binary) ? parseInt(this.binary, 2) : 'Enter a binary!'
+            const binaryConverted = this.binary.replace(/\n/g,'')
+            return /[^01]+/.test(binaryConverted) ? 'Enter a binary!' : parseInt(binaryConverted, 2)
         }
     }
 }
