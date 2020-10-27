@@ -1,6 +1,6 @@
 <template>
     <h3 class="app-convert-title">{{ title }}</h3>
-    <input class="app-convert-input" v-model="number" placeholder="Enter your number"/>
+    <textarea class="app-convert-input" v-model="number" placeholder="Enter your number"/>
     <div class="app-convert-converted">
         <p v-show="number.length > 0">{{ numberToBinary }}</p>
     </div>
@@ -18,8 +18,8 @@ export default {
     },
     computed: {
         numberToBinary() {
-            return /[a-zA-Z,.]+/g.test(this.number) ? 
-                'Enter a integer!' : 
+            return /[a-zA-Z,.-]+/g.test(this.number) ? 
+                'Enter a positive integer!' : 
                 parseInt(this.number, 10).toString(2)
         }
     }

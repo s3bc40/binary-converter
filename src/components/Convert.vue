@@ -11,6 +11,7 @@
         </div>
         <ConvertBinaryToNum></ConvertBinaryToNum>
         <ConvertNumToBinary></ConvertNumToBinary>
+        <ConvertStringToBinary></ConvertStringToBinary>
     </div>
 </template>
 
@@ -18,13 +19,15 @@
 // Import components
 import ConvertBinaryToNum from './ConvertBinaryToNum'
 import ConvertNumToBinary from './ConvertNumToBinary'
+import ConvertStringToBinary from './ConvertStringToBinary'
 
 // Export component to App
 export default {
     name: 'BinaryConv',
     components: {
         ConvertBinaryToNum,
-        ConvertNumToBinary
+        ConvertNumToBinary,
+        ConvertStringToBinary
     },
 }
 </script>
@@ -51,7 +54,7 @@ export default {
 .app-description > p {
     margin: auto;
     width: 50%;
-    font-size: 1vw;
+    font-size: 1.2vw;
 }
 .app-description > footer {
     color: lightgrey;
@@ -64,7 +67,7 @@ export default {
 }
 .app-convert-input {
     width: 80%;
-    height: 60px;
+    height: 75px;
     margin: auto;
     padding: 0.5em 1em;
     resize: none;
@@ -76,10 +79,13 @@ export default {
     text-align: center;
     background-color: white;
     width: 80%;
-    height: 60px;
+    height: 75px;
     margin: auto;
     box-sizing: border-box;
     border-radius: 2px;
     border: dotted 2px magenta;
+    overflow: auto;
+    word-wrap: break-word;
+    scroll-behavior: smooth;
 }
 </style>
